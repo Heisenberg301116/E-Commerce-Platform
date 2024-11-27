@@ -1,0 +1,41 @@
+# Node.js (server)
+server/node_modules/
+server/.env
+server/constants
+
+# React (client)
+client/node_modules/
+client/.env
+client/build/
+client/.cache/
+client/.DS_Store
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+logs/
+
+# Dependency lockfiles
+yarn.lock
+package-lock.json
+
+# Temporary files and OS-specific files
+*.tmp
+*.swp
+*.lock
+.DS_Store
+
+# Editor-specific files
+.vscode/
+.idea/
+
+# Miscellaneous
+old backup/
+credit card details.txt
+How_to_run_mongosh.txt
+*.env.local
+*.env.development
+*.env.production
+*.env.test
