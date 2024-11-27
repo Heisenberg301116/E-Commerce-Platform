@@ -3,6 +3,8 @@ import * as actionTypes from "../constants/productConstants";
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 
+console.log("================> backend url = ", BACKEND_URL)
+
 
 const FetchError = (error) => {
     if (error.response && error.response.data.message) {
