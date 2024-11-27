@@ -15,7 +15,9 @@ const CLIENT_URL = process.env.CLIENT_URL;
 const app = express();
 
 app.use(cors({
-    origin: CLIENT_URL
+    origin: CLIENT_URL,
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    credentials: true
 }));
 
 app.use(bodyParser.json({ extended: true }))
