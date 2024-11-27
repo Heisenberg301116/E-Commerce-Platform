@@ -1,0 +1,72 @@
+[
+    {
+        "_id": {
+            "$oid": "670ba7c21b490251fac03c3c"
+        },
+        "product_id": {
+            "$oid": "670b90f849af9bf770efd3d6"
+        },
+        "image": "Images/Banners/boat.jpg",
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "670ba7c21b490251fac03c3d"
+        },
+        "product_id": {
+            "$oid": "670b90f849af9bf770efd3d7"
+        },
+        "image": "Images/Banners/borosil.jpg",
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "670ba7c21b490251fac03c3e"
+        },
+        "product_id": {
+            "$oid": "670b90f849af9bf770efd3d8"
+        },
+        "image": "Images/Banners/clothing.jpg",
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "670ba7c21b490251fac03c3f"
+        },
+        "product_id": {
+            "$oid": "670b90f849af9bf770efd3d9"
+        },
+        "image": "Images/Banners/household.jpg",
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "670ba7c21b490251fac03c40"
+        },
+        "product_id": {
+            "$oid": "670b90f849af9bf770efd3da"
+        },
+        "image": "Images/Banners/scooter.jpg",
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "670ba7c21b490251fac03c41"
+        },
+        "product_id": {
+            "$oid": "670b90f849af9bf770efd3db"
+        },
+        "image": "Images/Banners/smartphones.jpg",
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "670ba7c21b490251fac03c42"
+        },
+        "product_id": {
+            "$oid": "670b90f849af9bf770efd3dc"
+        },
+        "image": "Images/Banners/watch.jpg",
+        "__v": 0
+    }
+]

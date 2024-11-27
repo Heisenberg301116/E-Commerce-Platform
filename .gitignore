@@ -1,7 +1,6 @@
 # Node.js (server)
 server/node_modules/
 server/.env
-server/constants
 
 # React (client)
 client/node_modules/

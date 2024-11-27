@@ -1,0 +1,172 @@
+[
+    {
+        "_id": {
+            "$oid": "670b77f3be4ec18b0c9813cf"
+        },
+        "name": "TBL Online",
+        "email": "support@tblonline.com",
+        "phone": "9834567890",
+        "total_products_sold": 60,
+        "register_date": {
+            "$date": "2009-01-14T00:00:00Z"
+        },
+        "rating": {
+            "stars": 4,
+            "total": 482
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "670b77f3be4ec18b0c9813d1"
+        },
+        "name": "SuperMart",
+        "email": "contact@supermart.com",
+        "phone": "8834561234",
+        "total_products_sold": 123,
+        "register_date": {
+            "$date": "2011-05-22T00:00:00Z"
+        },
+        "rating": {
+            "stars": 4.5,
+            "total": 300
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "670b77f3be4ec18b0c9813d3"
+        },
+        "name": "QuickShop",
+        "email": "info@quickshop.net",
+        "phone": "9832987654",
+        "total_products_sold": 250,
+        "register_date": {
+            "$date": "2015-07-19T00:00:00Z"
+        },
+        "rating": {
+            "stars": 4.2,
+            "total": 700
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "670b77f3be4ec18b0c9813d5"
+        },
+        "name": "ShopEase",
+        "email": "support@shopease.io",
+        "phone": "9834512345",
+        "total_products_sold": 180,
+        "register_date": {
+            "$date": "2010-11-10T00:00:00Z"
+        },
+        "rating": {
+            "stars": 3.8,
+            "total": 600
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "670b77f3be4ec18b0c9813d7"
+        },
+        "name": "Mega Deals",
+        "email": "hello@megadeals.co",
+        "phone": "9837654321",
+        "total_products_sold": 500,
+        "register_date": {
+            "$date": "2018-03-05T00:00:00Z"
+        },
+        "rating": {
+            "stars": 4.7,
+            "total": 850
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "670b77f3be4ec18b0c9813d9"
+        },
+        "name": "Bargain Bazaar",
+        "email": "contact@bargainbazaar.com",
+        "phone": "8832345678",
+        "total_products_sold": 320,
+        "register_date": {
+            "$date": "2012-08-14T00:00:00Z"
+        },
+        "rating": {
+            "stars": 3.9,
+            "total": 400
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "670b77f3be4ec18b0c9813db"
+        },
+        "name": "BuyRight",
+        "email": "sales@buyright.org",
+        "phone": "9831122334",
+        "total_products_sold": 750,
+        "register_date": {
+            "$date": "2020-01-25T00:00:00Z"
+        },
+        "rating": {
+            "stars": 4.6,
+            "total": 900
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "670b77f3be4ec18b0c9813dd"
+        },
+        "name": "DailyMart",
+        "email": "support@dailymart.biz",
+        "phone": "9839876543",
+        "total_products_sold": 410,
+        "register_date": {
+            "$date": "2016-10-30T00:00:00Z"
+        },
+        "rating": {
+            "stars": 4.3,
+            "total": 500
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "670b77f3be4ec18b0c9813df"
+        },
+        "name": "FastBuy",
+        "email": "info@fastbuy.shop",
+        "phone": "8832233445",
+        "total_products_sold": 620,
+        "register_date": {
+            "$date": "2008-12-09T00:00:00Z"
+        },
+        "rating": {
+            "stars": 4.1,
+            "total": 700
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "670b77f3be4ec18b0c9813e1"
+        },
+        "name": "GlobalMart",
+        "email": "contact@globalmart.in",
+        "phone": "9830011223",
+        "total_products_sold": 1000,
+        "register_date": {
+            "$date": "2019-06-18T00:00:00Z"
+        },
+        "rating": {
+            "stars": 4.8,
+            "total": 950
+        },
+        "__v": 0
+    }
+]
