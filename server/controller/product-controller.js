@@ -7,7 +7,7 @@ import HighRes from '../model/HighResPhotos.js'
 
 export const ProductTitles = async (request, response) => {
     // Empty request body
-
+    console.log("============ >inside product titles route")
     try {
         // Fetch only the longtitle field from all products
         const products = await Product.find({}, { 'title.longtitle': 1 });
