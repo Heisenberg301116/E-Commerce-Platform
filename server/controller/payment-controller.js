@@ -54,6 +54,7 @@ export const doPayment = async (request, response) => {
         })
     }
     catch (error) {
+        console.log("===================> error in payment-controller do-payment = ", error.message)
         response.status(500).json({ message: error.message })
     }
 }
@@ -90,6 +91,7 @@ export const status = async (request, response) => {
             response.redirect(url)
         }
     }).catch(function (error) {
+        console.log("===================> error in payment-controller status = ", error.message)
         response.status(500).json({ message: error.message })
     })
 }
