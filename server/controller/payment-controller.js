@@ -69,7 +69,7 @@ export const doPayment = async (req, res) => {
             res.redirect(response.data.data.instrumentResponse.redirectInfo.url);
         })
         .catch(function (error) {
-            console.log("==============> error in 1st = ", error)
+            console.log("==============> error in 1st = ", error.message)
             res.send(error);
         });
 }
