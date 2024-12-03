@@ -48,7 +48,7 @@ export const doPayment = async (req, res) => {
 
     // X-VERIFY => SHA256(base64EncodedPayload + "/pg/v1/pay" + SALT_KEY) + ### + SALT_INDEX
     let string = base64EncodedPayload + "/pg/v1/pay" + SALT_KEY;
-    let sha256_val = sha256(string);
+    let sha256_val = crypto.createHash('sha256').update(string).digest('hex')
     let xVerifyChecksum = sha256_val + "###" + SALT_INDEX;
 
     axios.post(
