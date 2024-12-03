@@ -3,13 +3,21 @@ import axios from 'axios';
 import dotenv from 'dotenv'
 
 dotenv.config();
+
+// real
+// const CLIENT_URL = process.env.CLIENT_URL;
+// const SERVER_URL = process.env.SERVER_URL;
+// const SALT_KEY = process.env.SALT_KEY;
+// const MERCHANT_ID = process.env.MERCHANT_ID;
+
+// fake
 const CLIENT_URL = process.env.CLIENT_URL;
 const SERVER_URL = process.env.SERVER_URL;
 const SALT_KEY = process.env.SALT_KEY;
 const MERCHANT_ID = process.env.MERCHANT_ID;
 
 export const doPayment = async (request, response) => {
-    console.log("============ >inside doPayment route and salt,merchant,server_url and client_url = ", CLIENT_URL, SERVER_URL, SALT_KEY, MERCHANT_ID)
+    // console.log("============ >inside doPayment route and salt,merchant,server_url and client_url = ", CLIENT_URL, SERVER_URL, SALT_KEY, MERCHANT_ID)
     try {
         const transactionId = request.body.transactionId;
 
@@ -26,7 +34,7 @@ export const doPayment = async (request, response) => {
             }
         }
 
-        console.log("========================> server rediret url = ", `${SERVER_URL}/status/${transactionId}`)
+        // console.log("========================> server rediret url = ", `${SERVER_URL}/status/${transactionId}`)
 
         const payload = JSON.stringify(data)
         const payloadMain = Buffer.from(payload).toString('base64')
@@ -35,7 +43,8 @@ export const doPayment = async (request, response) => {
         const sha256 = crypto.createHash('sha256').update(string).digest('hex')
         const checksum = sha256 + '###' + keyIndex
 
-        const testURL = 'https://api-preprod.phonepe.com/apis/pg-sandbox/pg/v1/pay'
+        // const testURL = 'https://api-preprod.phonepe.com/apis/pg-sandbox/pg/v1/pay'      // real
+        const testURL = 'https://api-preprod.phonepe.com/apis/pg-sandbox/pg/v1/pay'     // fake
 
         const options = {
             method: "POST",
@@ -51,9 +60,10 @@ export const doPayment = async (request, response) => {
         }
 
         await axios(options).then(function (res) {
+            console.log("=============> response after .then = ", res)
             return response.json(res.data)
         }).catch(function (error) {
-            console.log("===================> error in payment-controller do-payment 1 = ", error.message)
+            console.log("===================> error in payment-controller do-payment 1 = ", error)
             return response.status(500).json({ message: `Payment failed ! ${error.message}` })
         })
     }
