@@ -27,7 +27,7 @@ export const doPayment = async (req, res) => {
     let userId = "MUID123";
 
     // Generate a unique merchant transaction ID for each transaction
-    let merchantTransactionId = request.body.transactionId;
+    let merchantTransactionId = req.body.transactionId;
 
     let normalPayLoad = {
         merchantId: MERCHANT_ID,
