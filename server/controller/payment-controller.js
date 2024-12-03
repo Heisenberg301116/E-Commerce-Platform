@@ -51,6 +51,8 @@ export const doPayment = async (req, res) => {
     let sha256_val = crypto.createHash('sha256').update(string).digest('hex')
     let xVerifyChecksum = sha256_val + "###" + SALT_INDEX;
 
+    console.log("=============> before")
+
     axios.post(
         `${PHONE_PE_HOST_URL}/pg/v1/pay`,
         { request: base64EncodedPayload },
@@ -63,10 +65,11 @@ export const doPayment = async (req, res) => {
         }
     )
         .then(function (response) {
-            console.log("response->", response.data);
+            console.log("response ======== ->", response.data);
             res.redirect(response.data.data.instrumentResponse.redirectInfo.url);
         })
         .catch(function (error) {
+            console.log("==============> error in 1st = ", error)
             res.send(error);
         });
 }
