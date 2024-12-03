@@ -9,6 +9,7 @@ const SALT_KEY = process.env.SALT_KEY;
 const MERCHANT_ID = process.env.MERCHANT_ID;
 
 export const doPayment = async (request, response) => {
+    console.log("============ >inside doPayment route")
     try {
         const transactionId = request.body.transactionId;
 
@@ -61,6 +62,7 @@ export const doPayment = async (request, response) => {
 
 
 export const status = async (request, response) => {
+    console.log("============ >inside status route")
     const merchantTransactionId = request.params.txnId;
     const merchantId = MERCHANT_ID;
     const keyIndex = 1
