@@ -26,6 +26,8 @@ export const doPayment = async (request, response) => {
             }
         }
 
+        console.log("========================> server rediret url = ", `${SERVER_URL}/status/${transactionId}`)
+
         const payload = JSON.stringify(data)
         const payloadMain = Buffer.from(payload).toString('base64')
         const keyIndex = 1
@@ -51,11 +53,12 @@ export const doPayment = async (request, response) => {
         await axios(options).then(function (res) {
             return response.json(res.data)
         }).catch(function (error) {
+            console.log("===================> error in payment-controller do-payment 1 = ", error.message)
             return response.status(500).json({ message: `Payment failed ! ${error.message}` })
         })
     }
     catch (error) {
-        console.log("===================> error in payment-controller do-payment = ", error.message)
+        console.log("===================> error in payment-controller do-payment 2 = ", error.message)
         response.status(500).json({ message: error.message })
     }
 }
