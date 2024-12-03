@@ -9,7 +9,7 @@ const SALT_KEY = process.env.SALT_KEY;
 const MERCHANT_ID = process.env.MERCHANT_ID;
 
 export const doPayment = async (request, response) => {
-    console.log("============ >inside doPayment route")
+    console.log("============ >inside doPayment route and salt,merchant,server_url and client_url = ", CLIENT_URL, SERVER_URL, SALT_KEY, MERCHANT_ID)
     try {
         const transactionId = request.body.transactionId;
 
@@ -87,6 +87,7 @@ export const status = async (request, response) => {
     }
 
     axios.request(options).then(function (res) {
+        console.log("================> inside axios.request after .then()")
         if (res.data.success === true) {
             const url = `${CLIENT_URL}/success`
             response.redirect(url)
