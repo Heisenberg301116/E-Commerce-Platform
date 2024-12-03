@@ -13,8 +13,8 @@ dotenv.config();
 // fake
 const CLIENT_URL = process.env.CLIENT_URL;
 const SERVER_URL = process.env.SERVER_URL;
-const SALT_KEY = process.env.SALT_KEY;
-const MERCHANT_ID = process.env.MERCHANT_ID;
+const SALT_KEY = '099eb0cd-02cf-4e2a-8aca-3e6c6aff0399';
+const MERCHANT_ID = 'PGTESTPAYUAT';
 
 export const doPayment = async (request, response) => {
     // console.log("============ >inside doPayment route and salt,merchant,server_url and client_url = ", CLIENT_URL, SERVER_URL, SALT_KEY, MERCHANT_ID)
@@ -44,7 +44,8 @@ export const doPayment = async (request, response) => {
         const checksum = sha256 + '###' + keyIndex
 
         // const testURL = 'https://api-preprod.phonepe.com/apis/pg-sandbox/pg/v1/pay'      // real
-        const testURL = 'https://api-preprod.phonepe.com/apis/pg-sandbox/pg/v1/pay'     // fake
+
+        const testURL = 'https://api-preprod.phonepe.com/apis/pg-sandbox'     // fake
 
         const options = {
             method: "POST",
@@ -63,7 +64,7 @@ export const doPayment = async (request, response) => {
             console.log("=============> response after .then = ", res)
             return response.json(res.data)
         }).catch(function (error) {
-            console.log("===================> error in payment-controller do-payment 1 = ", error)
+            console.log("===================> error in payment-controller do-payment 1 = ", error.message)
             return response.status(500).json({ message: `Payment failed ! ${error.message}` })
         })
     }
